@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'form/css/main.css' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+    <h1 class="text-center">FAIRE</h1>
+    <form class="container-md" action="/form/create" method="POST">
+        {% csrf_token %}
+        <div class="role">
+            <h5>Tell us a bit more about the role.</h5>
+            <div class="form-group">
+                <label for="industry">Industry</label>
+                <select class="form-control" id="industry" name="industry">
+                    <option>Information Technology</option>
+                    <option>Education</option>
+                    <option>Health</option>
+                    <option>Lawyers/Lawfirms</option>
+                    <option>Real Estate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select class="form-control" id="role" name="role">
+                    <option>Software Engineer</option>
+                    <option>Computer Operator</option>
+                    <option>DevOps</option>
+                    <option>Network Administrator</option>
+                    <option>Hardware Technician</option>
+                </select>
+            </div>
+        </div>
+            <div class="values">
+                <h5>Highlight the values that best describe your company's culture.</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill badge-success">Accountability</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Achievement</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill badge-success">Addaptability</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Adventure</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Altruism</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Ambition</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Authenticity</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill badge-success">Balance</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Beauty</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Being the Best</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Belonging</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Career</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Caring</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill">Collaboration</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="form-control badge badge-pill badge-success">Commitment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="competencies">
+                <h5>Mark the competencies that are vital to the success of the computer operator.</h5>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="detail">
+                                    <label class="form-check-label" for="detail"></label>
+                                </div>
+                                <h5 class="card-title">Attention to detail</h5>
+                                <p class="card-text">The ability to recognize the component parts of a procedure or object, and
+                                    to verify the correctness or error in an individual part or procedure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="detail">
+                                    <label class="form-check-label" for="detail"></label>
+                                </div>
+                                <h5 class="card-title">Concrete organization</h5>
+                                <p class="card-text">The ability to understand the immediate, concrete needs of a situation and
+                                    to establish an effective action plan for meeting those needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="detail">
+                                    <label class="form-check-label" for="detail"></label>
+                                </div>
+                                <h5 class="card-title">Creativity</h5>
+                                <p class="card-text">The ability to devise new approaches to make the improvements or solve
+                                    problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="detail">
+                                    <label class="form-check-label" for="detail"></label>
+                                </div>
+                                <h5 class="card-title">Empathic outlook</h5>
+                                <p class="card-text">The ability to perceive and understand the feelings and attitudes of
+                                    others.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

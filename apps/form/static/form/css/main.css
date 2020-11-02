@@ -1,0 +1,12 @@
+div.card-body {
+    height: 260px;
+}
+
+div.role, div.values, div.competencies {
+    padding-bottom: 50px;
+}
+
+h5 {
+    padding-bottom: 20px;
+    text-align: center;
+}
